@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ui</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9fafb;
+      }
+      .container {
+        width: 600px;
+        margin: 10px auto;
+        background-color: #4f46e5;
+        color: white;
+        padding: 10px 20px;
+      }
+      .heading {
+        text-align: center;
+        font-size: 1.875rem;
+        font-weight: 600;
+        padding: 10px 0;
+      }
+      .subheading {
+        font-size: 1.25rem;
+        text-align: center;
+      }
+      .order-details {
+        margin: 20px 10px;
+        background-color: white;
+        border-radius: 8px;
+        padding: 15px;
+        color: #374151;
+      }
+      .order-heading {
+        color: #10b981;
+        text-align: center;
+        font-size: 1.125rem;
+      }
+      .order-info {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      .order-info p {
+        margin: 0;
+      }
+      table {
+        width: 100%;
+        margin-top: 20px;
+        color: #6b7280;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 10px 0;
+        text-align: left;
+      }
+      tr {
+        border-bottom: 1px solid #e5e7eb;
+      }
+      .total-section {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        color: black;
+        padding: 15px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">Your Kdemy order is confirmed</h1>
+      <p class="subheading">And we're just as excited as you are</p>
+      <div class="order-details">
+        <h1 class="order-heading" style="color: rgb(33, 234, 33)">
+          Here's what you ordered
+        </h1>
+
+        <div class="order-info">
+          <p>Order <%= orderId %></p>
+          <p>Order Date: <%= date %></p>
+        </div>
+        <hr />
+        <table>
+          <thead>
+            <tr>
+              <th>ITEM</th>
+              <th>QTY</th>
+              <th>COST</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= item %></td>
+              <td>1</td>
+              <td>$<%= price %></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="total-section">
+          <p>Subtotal:</p>
+          <p>$<%= price %></p>
+        </div>
+        <div class="total-section">
+          <p>Total:</p>
+          <p>$<%= price %></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

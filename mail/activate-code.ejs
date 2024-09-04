@@ -1,0 +1,40 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Verify</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="flex w-full justify-center mt-10">
+      <div class="px-2">
+        <div class="bg-blue-700 p-5 max-w-[700px] text-white">
+          <h1 class="text-center text-xl gont-seminbold">Welcome to Kdemy</h1>
+        </div>
+        <div class="max-w-[700px] p-5 bg-slate-100">
+          <p class="text-slate-600">Hello <%= user.name %>,</p>
+          <p class="my-5 text-slate-600">
+            Thank you for registering with E-learning To Activate your account
+            please use the following activate code
+          </p>
+
+          <strong class="text-2xl text-gray-500"><%=code%></strong>
+          <p class="my-5 text-slate-600">
+            Please enter this code on the activation page within the next 5
+            minute
+          </p>
+          <p class="my-5 text-slate-600">
+            If you did not register for a E-Learning account please ignore this
+            email
+          </p>
+        </div>
+        <div class="max-w-[700px] p-3 py-5 bg-gray-200">
+          If you have any questions,please don't hesitate to contact us at
+          <a href="mailto:yme9891@gmail.com" class="text-blue-500"
+            >yme9891@gmail.com</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
